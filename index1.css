@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+/*pocetak indexa*/
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0 ;
+    padding-top: -200%;
+    background-color: transparent;
+}
+
+.home-div{
+    background-color: transparent;
+}
+#home{
+    background-image: url(./Slike/Voja\ sajt\ 1.png);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    margin-top: -100;
+}
+
+#home .button1{
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 20px;
+    transition: .1s ease background-color;
+    font-size: small;
+    transition-property: background-color, color;
+
+}
+
+#home .button1:hover{
+    color: black;
+    background-color: white;
+}
+
+#home .button2{
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 20px;
+    transition: .1s ease background-color;
+    font-size: small;
+    transition-property: background-color, color;
+}
+
+#home .button2:hover{
+    color: black;
+    background-color: white;
+}
+
+#home .button3{
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 20px;
+    transition: .1s ease background-color;
+    font-size: small;
+    transition-property: background-color, color;
+}
+
+#home .button3:hover{
+    color: black;
+    background-color: white;
+}
+
+#home::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.938);
+    opacity: .3;
+    z-index: -1;
+}
+ 
+#home h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgba(255, 255, 255, 0.137);
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+    
+}
+
+/*animacija*/
+
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal{
+    100%{
+        color:rgb(252, 252, 252);
+        text-shadow: rgb(0, 0, 0);
+        font-weight: bolder;
+        display: inline-block;
+        background-color: rgba(187, 202, 202, 0.233);
+    }
+}
+
+@keyframes navLikFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+
+/*animacija*/
+#home .home {
+    max-width: 1200px;   
+    justify-content: center;
+}
+#home h1{
+    display: block;
+    width: fit-content;
+    font-size: 6rem;
+    position: relative;
+    color: transparent;
+    font-weight: 1000;
+    background-color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+    padding-left: 0rem;
+}

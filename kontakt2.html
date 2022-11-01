@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./kontakt2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="script" href="./skripte.js">
+    <title>Kontakt</title>
+</head>
+
+<header>
+    <nav>
+        <div class="logo">
+            <a href="./index.html"><h4>Voyar Studio</h4></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html">Pocetna</a></li>
+            <li><a href="./biografija.htm">Biografija</a></li>
+            <li><a href="./radovi.html">Radovi</a></li>
+            <li><a href="./kontakt2.html">Kontakt</a></li>
+        </ul>
+        <div class="minimeni">
+            <div class="minipocetna"></div>
+            <div class="minibiografija"></div>
+            <div class="miniradovi"></div>
+            <div class="minikonatkt"></div>
+        </div>
+    </nav>
+</header>
+
+    <section class="contact">
+        <div class="content">
+            <h2>Kontakt</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati a ipsam ab maiores minima incidunt, dolor inventore ad id repellat esse placeat quae totam deleniti reiciendis velit? Mollitia, a dolorum!</p>
+
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                
+                <div class="box">
+                    <div class="icon">
+                       <a href="https://www.instagram.com/voyarfoto/" type="button" class="button-ig"> <i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="text">
+                        <h3>Instagram</h3>
+                        <p>@voyarfoto</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="icon">
+                       <a href="https://www.facebook.com/vojin.radovanovic" type="button" class="button-fb"> <i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="text">
+                        <h3>Facebook</h3>
+                        <p>Vojin Voya Radovanovic</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="icon">
+                         <a href="tel:+381604473526" type="button" class="button-ph"><i class="fas fa-phone-alt"></i></a>
+                    </div>
+                    <div class="text">
+                        <h3>Telefon</h3>
+                       </a><p>+381604473526</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="icon">
+                        <a href="mailto:voyarphoto@gmail.com" type="button" class="button-ph"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>voyarphoto@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contactForm">
+                <form action="">
+                    <h2>Poruka</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Ime</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Prezime</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Email</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <textarea name="" cols="30" rows="10" required></textarea>
+                        <span>Poruka.....</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send"  class="Send">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+    const navSlide = () =>{
+        const minimeni = document.querySelector('.minimeni');
+        const nav = document.querySelector('.nav-links') ;
+        const navLinks = document.querySelectorAll('.nav-links li');
+    
+        minimeni.addEventListener('click',()=>{
+            nav.classList.toggle('nav-active');
+    
+        })
+    }
+    
+    navSlide();
+</script>
+</body>
+</html>

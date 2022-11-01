@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="galerija2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="text-box">
+                    <h1>Profil</h1>
+                    <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores soluta quis quasi aperiam vitae placeat odio provident, architecto rem deserunt tenetur a iste adipisci animi reprehenderit cum id perspiciatis maiores.</h5>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="gallery-box">
+                    <img src="./Slike/landscape/landscape1.png" id="gallery" alt="">
+
+                    <ul>
+                        <li class="btn">01</li>
+                        <li class="btn active">02</li>
+                        <li class="btn">03</li>
+                        <li class="btn">05</li>
+                        <li class="btn">06</li>
+                        <li class="btn">07</li>
+                        <li class="btn">08</li>
+                        <li class="btn">09</li>
+                        <li class="btn">10</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var btn = document.getElementsByClassName("btn");
+        var gallery = document.getElementById("gallery");
+
+        var images = new Array (
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+           './Slike/landscape/landscape1.png' ,
+        );
+
+        for(let i=0; i<btn.length; i++){
+            btn[i].onclick = function(){
+                gallery.src = images[i];
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace("active" , "" );
+                this.className += "acrive" ;
+            };
+        }
+
+    </script>
+</body>
+</html>

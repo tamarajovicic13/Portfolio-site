@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+
+/*navigacija*/
+/* navigacija */
+#biografija{
+    background-color: black;
+    display: flex;
+   
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+}
+
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size:40px ;
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    font-size: 13px;
+}
+.nav-links li{
+    list-style: none;
+}
+ .nav-links a{
+     color: white;
+     text-decoration:none;
+     letter-spacing: 3px;
+     font-weight: bold;
+ }
+ .minimeni{
+     display: none;
+     cursor: pointer;
+     background: black;
+ }
+ .minimeni div{
+     width: 25px;
+     height: 1px;
+     background-color: white;
+     margin: 5px;
+
+
+ }
+ @keyframes navLikFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color:rgb(252, 252, 252);
+        text-shadow: rgb(0, 0, 0);
+        font-weight: bolder;
+        display: inline-block;
+        background-color: rgba(187, 202, 202, 0.233);
+    }
+}
+@media screen and (max-width: 1024PX) {
+    .nav-links{
+      width: 50%;
+
+    }
+}
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-linksl li{
+        opacity: 0;
+    }
+}
+.nav-active{
+    transform: translateX(0);
+}
+/* navigacija */
+/*navigacija*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.contact .content p{
+    font-weight: 500;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    background: white;
+    color: black;
+}
+
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+
+}
+
+.container .contactInfo .box .text h3{
+    font-weight: 300;
+    
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: white;
+    color: black;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: #333;
+
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input , 
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span ,
+.contactForm .inputBox input:valid ~ span ,
+.contactForm .inputBox textarea:focus ~ span ,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox .Send{
+    width: 100px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 991px){
+    body{
+        overflow-x: hidden;
+        overflow-wrap: normal;
+    }
+    .contact{
+        padding: 60px;
+    }
+    
+    .container{
+        flex-direction: column;
+    }
+    
+    .container .contactInfo{
+        margin-bottom: 40px;
+        
+    }
+    
+    .container .contactInfo, 
+    .contactForm{
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 1024PX) {
+    .nav-links{
+      width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-linksl li{
+        opacity: 0;
+    }
+    .minimeni{
+        display: block;
+    }
+}

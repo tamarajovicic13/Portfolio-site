@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="video.css">
+    <title>Video galerija</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Video galerija</h1>
+        <div class="row">
+
+            <div class="col">
+                <div class="feature-imh">
+                    <img src="./Video/pic1.png" alt="">
+                    <img src="./Video/play.png" class="play-btn" alt="" onclick="PlayVideo('./Video/video 1.mp4')">
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="./Video/pic2.png" alt="">
+                        <img src="./Video/play.png" class="play-btn" alt="" onclick="PlayVideo('./Video/video 2.mp4')">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reprehenderit aliquid sed a totam quae voluptates mollitia laudantium, nam dolore, aperiam culpa id beatae. Suscipit, assumenda. 
+                        Aperiam accusamus voluptatem neque!</p>
+                </div>
+            
+
+
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="./Video/pic3.png" alt="">
+                        <img src="./Video/play.png" class="play-btn" alt="" onclick="PlayVideo('./Video/video 3.mp4')">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reprehenderit aliquid sed a totam quae voluptates mollitia laudantium, nam dolore, aperiam culpa id beatae. Suscipit, assumenda. 
+                        Aperiam accusamus voluptatem neque!</p>
+                </div>
+
+
+
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="./Video/pic4.png" alt="">
+                        <img src="./Video/play.png" class="play-btn" alt="" onclick="PlayVideo('./Video/video 4.mp4')">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reprehenderit aliquid sed a totam quae voluptates mollitia laudantium, nam dolore, aperiam culpa id beatae. Suscipit, assumenda. 
+                        Aperiam accusamus voluptatem neque!</p>
+                </div>   
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="video-player" id="VideoPlayer">
+        <video width="100%" controls autoplay id="MyVideo">
+            <source src="./Video/video 1.mp4" type="video/mp4">
+        </video>
+        <img src="./Video/close.png" class="close-btn" alt="" onclick="StopVideo()">
+    </div>
+
+<script>
+
+    var VideoPlayer = document.getElementById("VideoPlayer");
+    var MyVideo = document.getElementById("MyVideo");
+
+    function StopVideo(){
+        VideoPlayer.style.display = "none";
+    }
+
+    function PlayVideo(file){
+        MyVideo.scr = file;
+        VideoPlayer.style.display = "block";
+    }
+
+</script>
+
+</body>
+</html>
